@@ -1,0 +1,17 @@
+name: 🚀 Auto test deploy
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: 📥 Cloner le repo
+      uses: actions/checkout@v3
+
+    - name: ✅ Afficher un message de test
+      run: echo "🔔 Nouveau push détecté. Prêt pour un déploiement automatique."
